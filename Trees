@@ -1,0 +1,32 @@
+//PAGE-1
+
+//Trees
+#include<vector>
+using namespace std;
+template<typename T>
+
+class treeNode
+{
+
+public:
+    T data;
+    vector <treeNode<T>> *children;
+    
+    treeNode(int data){
+    this->data = data;
+    }
+};
+
+//PAGE-2
+#include<iostream>
+#include "trees.cpp"
+
+using namespace std;
+int main(){
+    treeNode <int> *root = new treeNode<int>(1);
+    treeNode <int> *node1 = new treeNode<int>(2);
+    treeNode <int> *node2 = new treeNode<int>(3);
+    root->children->push_back(node1);
+    root->children->push_back(node2);
+
+}
